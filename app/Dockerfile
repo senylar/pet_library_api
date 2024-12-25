@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8000
 
 # Command to run the server application
-CMD ["uvicorn", "app.main:app"]
+CMD ["uvicorn", "main:app", "--reload"]
