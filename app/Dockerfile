@@ -17,4 +17,4 @@ COPY . base/app
 EXPOSE 8000
 
 # Command to run the server application
-CMD ["python", "main.py"]
+CMD ["python", "app/main.py"]
