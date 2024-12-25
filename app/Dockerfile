@@ -2,7 +2,7 @@
 FROM python:3.10-slim
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /base
 
 # Copy the requirements file into the container
 COPY requirements.txt .
@@ -11,10 +11,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code into the container
-COPY . .
+COPY . ./app
 
 # Expose the port that the server will run on
 EXPOSE 8000
 
 # Command to run the server application
-CMD ["uvicorn", "main:app", "--reload"]
+CMD ["uvicorn", "app.main:app", "--reload"]
