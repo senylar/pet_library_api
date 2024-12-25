@@ -1,0 +1,33 @@
+### GET /books
+GET http://127.0.0.1:8000/books
+accept: application/json
+
+### GET /books/all
+GET http://127.0.0.1:8000/books/all
+accept: application/json
+
+### POST /books/addBook
+POST http://127.0.0.1:8000/books/addBook
+accept: application/json
+Content-Type: application/json
+
+{
+  "title": "4191393091 градусов",
+  "author": "витя",
+  "year": 2023
+}
+
+### PUT /books/updateBook/{book_id}
+PUT http://127.0.0.1:8000/books/updateBook/1
+accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Updated Title",
+  "author": "Updated Author",
+  "year": 2024
+}
+
+### DELETE /books/deleteBook/{book_id}
+DELETE http://127.0.0.1:8000/books/deleteBook/1
+accept: application/json
