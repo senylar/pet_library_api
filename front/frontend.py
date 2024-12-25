@@ -5,12 +5,12 @@ API_BASE_URL = "http://127.0.0.1:8000"  # Базовый URL вашего API
 
 st.set_page_config(page_title="Library Management", layout="centered", page_icon="📚")
 
-# Заголовок
+
 st.title("📚 Library Management System")
 st.sidebar.title("Navigation")
 menu = st.sidebar.radio("Choose an action:", ["Books", "Issues", "Readers"])
 
-# Функции для API
+
 def fetch_data(endpoint):
     response = requests.get(f"{API_BASE_URL}{endpoint}")
     return response.json() if response.status_code == 200 else None
@@ -27,7 +27,7 @@ def delete_data(endpoint):
     response = requests.delete(f"{API_BASE_URL}{endpoint}")
     return response.status_code == 200
 
-# Страницы
+
 if menu == "Books":
     st.subheader("Manage Books")
 
