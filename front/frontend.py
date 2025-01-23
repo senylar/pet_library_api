@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_BASE_URL = "http://127.0.0.1:8000"  # Базовый URL вашего API
+API_BASE_URL = "https://3196439-cd71947.twc1.net"  # Базовый URL вашего API
 
 st.set_page_config(page_title="Library Management", layout="centered", page_icon="📚")
 

@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8501
 
 # Command to run the Streamlit application
-CMD ["streamlit", "run", "frontend.py"]
+ENTRYPOINT ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
